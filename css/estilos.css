@@ -335,23 +335,25 @@ hr{
     .header{
         height: initial;
         .navegacion{
-            margin-left:20px;
-            margin-right: 20px;
+            margin-left:10px;
+            margin-right: 10px;
             flex-direction: column;
-            row-gap:20px;
+            row-gap: 20px;
             .anclaLogo{
                 font-size: 1.2rem;
                 font-weight:700;
-              
-                
             }
             .listaNav{
+               
+                padding:initial;
                 .listaItem{
                     .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
                         font-size: 1rem;
                     }
                     .iniciarSesion{
-                        padding: 0.5rem 0.8rem;
+                        padding: 0.2rem;
                     }
                 }
             }
@@ -372,7 +374,7 @@ hr{
         }
         .buscadorPrincipal{
             .tituloSection{
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             .buscadorPeliculas{
                 .inputBuscador{
@@ -393,7 +395,7 @@ hr{
             }
             .peliculas{
                 .pelicula{
-                    width:150px;
+                    width:120px;
                     height: 250px;
                     .imgTendencia{
                         height: 90%;
