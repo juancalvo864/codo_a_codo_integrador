@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -49,24 +56,45 @@ body{
             color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
+            /*animacion hover*/
+            &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
         }
         .listaNav{
             list-style: none;
             display: flex;
             align-items: center;
             .listaItem{
-                margin-left:20px;
+                margin-right:20px;
                 .linkNav{
                     text-decoration: none;
                     color:#ffffff;
                     font-weight: 700;
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                       
+                        border-radius: 5px;
+                       
+                    }
                 }
                 .iniciarSesion{
                     background-color: #181419;
                     color: white;
                     padding: 0.5rem 1rem;
                     border-radius: 5px;
+                     /* Agregar efecto de botón presionado */
+                     transition: transform 0.3s, box-shadow 0.3s;
+                     &:hover {
+                         background-color: #9f3647;
+                         transform: scale(0.95);
+                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                     }
                 }
             }
            
@@ -104,6 +132,13 @@ body{
             font-size: 1.2rem;
             font-weight: 700;
             text-decoration: none;
+             /* Agregar efecto de botón presionado */
+             transition: transform 0.3s, box-shadow 0.3s;
+             &:hover {
+                 background-color: #9f3647;
+                 transform: scale(0.95);
+                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+             }
         }
     }
     .buscadorPrincipal{
@@ -148,6 +183,13 @@ body{
                 font-weight: 700;
                 border: 2px solid white;
                 text-align: center;
+                 /* Agregar efecto de botón presionado */
+                 transition: transform 0.3s, box-shadow 0.3s;
+                 &:hover {
+                     background-color: #9f3647;
+                     transform: scale(0.95);
+                     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+                 }
             }
         }
        
@@ -191,6 +233,13 @@ body{
             font-weight: 500;
             text-decoration: none;
             margin-bottom:60px;
+             /* Agregar efecto de botón presionado */
+             transition: transform 0.3s, box-shadow 0.3s;
+             &:hover {
+                 background-color: #9f3647;
+                 transform: scale(0.95);
+                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+             }
 
         }
     }
@@ -293,6 +342,8 @@ hr{
             .anclaLogo{
                 font-size: 1.2rem;
                 font-weight:700;
+              
+                
             }
             .listaNav{
                 .listaItem{
@@ -408,6 +459,10 @@ hr{
             color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
+             /*animacion hover*/
+            &:hover{
+                animation: tilt-n-move-shaking 0.25s infinite;
+            }
         }
     }
     .main{
