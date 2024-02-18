@@ -16,20 +16,23 @@
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(255,219,46);
+    background: #9f3647;
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255,219,46);
+    background:#9f3647;
 }
 body{
-    background-color: rgb(51,51,51);
+    background-color: #181419;
     color:white; 
+     /* scrollbar-color: #9f3647  #181419; /*nuevo
+     scrollbar-width: thin;*/
 }
+
 .header{
-    background-color: rgb(255,219,46);
-    color: rgb(51,51,51);
+    background-color:#9f3647;
+    color:#ffffff;
     height: 10vh;
     position:sticky;
     top: 0;
@@ -43,7 +46,7 @@ body{
         padding: 1.5rem 0;
         .anclaLogo{
             text-decoration: none;
-            color: rgb(51,51,51);
+            color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
         }
@@ -55,12 +58,12 @@ body{
                 margin-left:20px;
                 .linkNav{
                     text-decoration: none;
-                    color: rgb(51,51,51);
+                    color:#ffffff;
                     font-weight: 700;
                     font-size: 1.2rem;
                 }
                 .iniciarSesion{
-                    background-color: rgb(51,51,51);
+                    background-color: #181419;
                     color: white;
                     padding: 0.5rem 1rem;
                     border-radius: 5px;
@@ -94,8 +97,8 @@ body{
             margin-bottom: 1rem;
         }
         .botonRegistrarse{
-            background-color: rgb(255,219,46);
-            color: rgb(51,51,51);
+            background-color:#9f3647;
+            color: #ffffff;
             padding: 1rem 2rem;
             border-radius: 5px;
             font-size: 1.2rem;
@@ -104,7 +107,7 @@ body{
         }
     }
     .buscadorPrincipal{
-        background-color: rgb(51,51,51);
+        background-color: #181419;
         color:white;
         height: 50vh;
         display: flex;
@@ -125,7 +128,7 @@ body{
             .inputBuscador{
                 border: 2px solid white;
                 border-radius: 25px;
-                color: white;
+                color: #ffffff;
                 font-size: 1.2rem;
                 height: 50px;
                 margin: 20px 0px;
@@ -134,9 +137,9 @@ body{
                 width: 500px;
             }
             .botonBuscador{
-                background-color: rgb(255,219,46);
+                background-color:#9f3647;
                 display: inline-block;
-                color: rgb(51,51,51);
+                color:#ffffff;
                 height: 50px;
                 margin: 20px 10px;
                 padding:0 20px;
@@ -180,8 +183,8 @@ body{
             box-sizing: content-box;
             margin-top:50px;
             margin-left:20px;
-            background-color: rgb(255,219,46);
-            color: rgb(51,51,51);
+            background-color:#9f3647;
+            color: #ffffff;
             padding: 1rem 1rem;
             border-radius: 5px;
             font-size: 1rem;
@@ -236,14 +239,14 @@ body{
    
 }
 hr{
-    border: 1px solid rgb(255,219,46);
+    border: 1px solid #9f3647;
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
 }
 .footer{
-    background-color: rgb(255,219,46);
-    color: rgb(51,51,51);
+    background-color:#9f3647;
+    color:#ffffff;
     height: 15vh;
     display: flex;
     justify-content: center;
@@ -256,12 +259,12 @@ hr{
             margin-left:20px;
             .linkNav{
                 text-decoration: none;
-                color: rgb(51,51,51);
+                color:#ffffff;
                 font-weight: 700;
                 font-size: 1.2rem;
             }
             .administradorPeliculas{
-                background-color: rgb(51,51,51);
+                background-color: #181419;
                 color: white;
                 padding: 0.5rem 1rem;
                 border-radius: 5px;
@@ -277,7 +280,8 @@ hr{
     }
 }
 
-/*media querys para mobile*/
+
+/*media querys para mobile index*/
 @media (max-width: 768px) {
     .header{
         height: initial;
@@ -383,6 +387,296 @@ hr{
                 }
                 .administradorPeliculas{
                     padding: 0.5rem 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+/*Registrarse */
+.bodyRegistrarse{
+    height: 100vh;
+    background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+    .headerRegistrarse{
+        color:#ffffff;
+        height: 8vh;
+        padding:30px;
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    }
+    .main{
+         /*seccion de registrarse.html*/
+        .seccionRegistrarse{
+            background-color:rgb(42, 42, 42);
+            width: 30%;
+            margin:0 auto;
+            border-radius: 5px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size:1.2rem;
+            .tituloRegistrarse{
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            /*seleccionar todos los input menos el checkbox*/
+            form{
+                width: 100%;
+                padding:40px;
+                input:not(.check,.boton),select{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    height: 40px;
+                    padding: 0px 20px;
+                    font-size: 1.2rem;
+                    border-radius: 20px;
+                    border: 2px solid #9f3647;
+                    background-color: #333333;
+                    outline: none;
+                    color:white;
+                }
+                .terminos{
+                    font-size: 0.8rem;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    .textoCheck{
+                        margin-left: 10px;
+                    }
+                }
+                .boton{
+                    width: 87%;
+                    box-sizing: content-box;
+                    background-color:#9f3647;
+                    border: 2px solid #9f3647;
+                    color: #ffffff;
+                    padding: 1rem 1rem;
+                    border-radius: 5px;
+                    font-size: 1rem;
+                    font-weight: 500;
+                   
+                }
+                .ayuda{
+                    margin-top:40px;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    color: #787878;
+                    font-weight:400;
+                   
+                }
+            }
+           
+        }
+   
+    }
+}
+
+/*media querys para mobile registrarse*/
+@media (max-width: 1200px) {
+    .bodyRegistrarse{
+        .headerRegistrarse{
+            padding:20px;
+            .anclaLogo{
+                font-size: 1rem;
+            }
+        }
+        .main{
+            .seccionRegistrarse{
+                width: 95%;
+                padding: 10px 10px;
+                .tituloRegistrarse{
+                    font-size: 2rem;
+                }
+               form{
+                width: 100%;
+                text-align: center;
+               
+                input:not(.check,.boton),select{
+                    width: 80%;
+                    height: 35px;
+                    font-size: 1rem;
+                }
+                .terminos{
+                    width: 80%;
+                    margin:0 auto;
+                    font-size: 0.7rem;
+                }
+                .boton{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    width: 70%;
+                    padding: 0.8rem 0.8rem;
+                    font-size: 0.8rem;
+                }
+                .ayuda{
+                    text-align: left;
+                    font-size: 0.8rem;
+                }
+               }
+               
+            }
+        }
+    }
+
+}
+
+/*Detalle Mario*/
+.mainDetalle{
+    
+    .detalle{
+        padding-top:50px;
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/mario-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        .contenedorDetalle{
+            width:75%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 60px;
+            img{
+              border-radius: 20px;
+            }
+            .textoDetalle{
+                h1{
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+                h2{
+                    margin-top:20px;
+                }
+                .contenedorCreditos{
+                    margin-top:20px;
+                    display: flex;
+                    justify-content:space-between;
+                }
+            }
+        }
+        
+        
+       
+    }
+    .trailer{
+        padding-top:150px;
+        padding-bottom: 100px;
+        width:75%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 70px;
+        .contenedorInfo{
+            .redes{
+                margin-bottom: 20px;
+                ul{
+                    list-style: none;
+                    display: flex;
+                    column-gap: 20px;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: #ffffff;
+                            font-size: 2.5rem;
+                            margin-right: 50px;
+                        }
+                    }
+                  
+                }
+            }
+            .info{
+                table{
+                    width: 100%;
+                    tr{
+                        td{
+                            font-size: 1.2rem;
+                            padding: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:1200px){
+    .mainDetalle{
+        .detalle{
+            height: initial;
+            .contenedorDetalle{
+                flex-direction: column;
+                row-gap: 20px;
+                img{
+                    width: 100%;
+                    height: 300px;
+                }
+                .textoDetalle{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    h2{
+                        font-size: 1rem;
+                    }
+                    .contenedorCreditos{
+                        flex-direction: column;
+                        row-gap: 10px;
+                    }
+                }
+            }
+        }
+        .trailer{
+            width:95%;
+            padding-top:50px;
+            padding-bottom: 50px;
+            flex-direction: column;
+            row-gap: 20px;
+            .contenedorTrailer{
+                width: 100%;
+                h2{
+                    margin-bottom: 20px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 300px;
+                
+                }
+            }
+            .contenedorInfo{
+                width: 100%;
+                .redes{
+                    width: 100% ;
+                    ul{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                       
+                        li{
+                            a{
+                                font-size: 2rem;
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+                .info{
+                    table{
+                        tr{
+                            td{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
                 }
             }
         }
