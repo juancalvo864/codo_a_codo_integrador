@@ -37,6 +37,7 @@ body{
      scrollbar-width: thin;*/
 }
 
+/*ESTILOS HEADER PARA ESCRITORIO*/
 .header{
     background-color:#9f3647;
     color:#ffffff;
@@ -78,22 +79,20 @@ body{
                     &:hover {
                         transform: scale(0.95);
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-                       
                         border-radius: 5px;
-                       
                     }
                 }
-                .iniciarSesion{
+                .linkNav.iniciarSesion{
                     background-color: #181419;
                     color: white;
-                    padding: 0.5rem 1rem;
+                    
                     border-radius: 5px;
                      /* Agregar efecto de botón presionado */
                      transition: transform 0.3s, box-shadow 0.3s;
                      &:hover {
                          background-color: #9f3647;
-                         transform: scale(0.95);
-                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        /* transform: scale(0.95);
+                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
                      }
                 }
             }
@@ -102,6 +101,36 @@ body{
     }
    
 }
+/*ESTILOS PARA HEADER MOBILE Y TABLET*/
+
+@media (max-width: 768px) {
+    .header{
+        height: initial;
+        .navegacion{
+            margin-left:10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            .anclaLogo{
+                font-size: 1.2rem;
+                font-weight:700;
+            }
+            .listaNav{
+               
+                padding:initial;
+                .listaItem{
+                    .linkNav{
+                        font-weight: 400;
+                        margin-right: initial;
+                        font-size: 1rem;
+                    }
+                  
+                }
+            }
+        }
+    }
+}
+/*ESTILOS PARA MAIN ESCRITORIO*/
 .main{
     .sectionPrincipal{
         color:white;
@@ -209,16 +238,59 @@ body{
             justify-content: center;
             flex-wrap: wrap;
             gap:60px;
-            .pelicula{
-                width:200px;
-                height: 300px;
-                .imgTendencia{
-                    width: 100%;
-                    height: 95%;
-                    object-fit: cover;
-                    border-radius: 10px;
+            a{
+                text-decoration: none;
+                color: #ffffff;
+                .pelicula{
+                    width:200px;
+                    height: 300px;
+                    position: relative;
+                    overflow: hidden;
+                   
+                    .imgTendencia{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+                  
+                    .tituloPelicula{
+                        z-index: 2;
+                        position: absolute;
+                        text-align: center;
+                        top: 50%;
+                        left: 50%;
+                        max-width: 20rem;
+                        width: 100%;
+                        transform: translateY(-50%) translateX(-50%);
+                        h4 {
+                            font-size: 2rem;
+                            font-weight: bold;
+                            opacity: 0;
+                            margin-bottom: 0.5rem;
+                            letter-spacing: 0.1rem;
+                            transition: opacity 0.5s ease-in-out;
+    
+                        }
+                    }
+                    &:hover h4 {
+                        opacity: 1;
+                      
+                    }
+                    &:hover::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        background-color: #9f3648; /* Color rojo transparente */
+                        z-index: 1; /* Para asegurarse de que esté sobre la imagen */
+                    }
                 }
             }
+          
         }
         .boton{
             border: 1px solid white;
@@ -287,12 +359,85 @@ body{
     }
    
 }
-hr{
-    border: 1px solid #9f3647;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 40px;
+
+@media (max-width: 768px) {
+    .main{
+        .sectionPrincipal{
+            .tituloPrincipal{
+                font-size: 2.5rem;
+            }
+            .subtituloPrincipal{
+                font-size: 1.5rem;
+            }
+            .botonRegistrarse{
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        .buscadorPrincipal{
+            .tituloSection{
+                font-size: 1.6rem;
+            }
+            .buscadorPeliculas{
+                .inputBuscador{
+                    font-size: 1rem;
+                    height: 40px;
+                    width: 300px;
+                }
+                .botonBuscador{
+                    height: 40px;
+                    padding:0 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .peliculasTendencia{
+            width: 95%;
+            .tituloSection{
+                font-size: 2rem;
+            }
+            .peliculas{
+                a{
+                    .pelicula{
+                        width:200px;
+                        height: 300px;
+                       
+                        .tituloPelicula{
+                            h4 {
+                                font-size: 1rem;
+                            }
+                        }
+                       
+                    }
+                }
+               
+            }
+            .boton{
+                padding: 0.8rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+        .peliculasAclamadas{
+            .tituloSection{
+                font-size: 2rem;
+            }
+            .aclamadas{
+                .peliculaItem{
+                    width: 150px;
+                    min-width: 150px;
+                    font-size: 15px;
+                    margin-left: 20px;
+                    .imgAclamada{
+                        width: 90%;
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
 }
+
+/*ESTILOS ESCRITORIO FOOTER*/
 .footer{
     background-color:#9f3647;
     color:#ffffff;
@@ -328,103 +473,8 @@ hr{
         cursor: pointer;
     }
 }
-
-
-/*media querys para mobile index*/
+/*ESTILOS FOOTER CELULAR Y TABLET CHICA*/
 @media (max-width: 768px) {
-    .header{
-        height: initial;
-        .navegacion{
-            margin-left:10px;
-            margin-right: 10px;
-            flex-direction: column;
-            row-gap: 20px;
-            .anclaLogo{
-                font-size: 1.2rem;
-                font-weight:700;
-            }
-            .listaNav{
-               
-                padding:initial;
-                .listaItem{
-                    .linkNav{
-                        font-weight: 400;
-                        margin-right: initial;
-                        font-size: 1rem;
-                    }
-                    .iniciarSesion{
-                        padding: 0.2rem;
-                    }
-                }
-            }
-        }
-    }
-    .main{
-        .sectionPrincipal{
-            .tituloPrincipal{
-                font-size: 2.5rem;
-            }
-            .subtituloPrincipal{
-                font-size: 1.5rem;
-            }
-            .botonRegistrarse{
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-            }
-        }
-        .buscadorPrincipal{
-            .tituloSection{
-                font-size: 1.6rem;
-            }
-            .buscadorPeliculas{
-                .inputBuscador{
-                    font-size: 1rem;
-                    height: 40px;
-                    width: 300px;
-                }
-                .botonBuscador{
-                    height: 40px;
-                    padding:0 15px;
-                    font-size: 1rem;
-                }
-            }
-        }
-        .peliculasTendencia{
-            .tituloSection{
-                font-size: 2rem;
-            }
-            .peliculas{
-                .pelicula{
-                    width:120px;
-                    height: 250px;
-                    .imgTendencia{
-                        height: 90%;
-                    }
-                }
-            }
-            .boton{
-                padding: 0.8rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
-        .peliculasAclamadas{
-            .tituloSection{
-                font-size: 2rem;
-            }
-            .aclamadas{
-                .peliculaItem{
-                    width: 150px;
-                    min-width: 150px;
-                    font-size: 15px;
-                    margin-left: 20px;
-                    .imgAclamada{
-                        width: 90%;
-                        height: 90%;
-                    }
-                }
-            }
-        }
-    }
     .footer{
         height: initial;
         padding-top:15px;
@@ -446,7 +496,10 @@ hr{
     }
 }
 
-/*Registrarse */
+
+
+
+/*ESTILOS ESCRITORIO PARA PAGINA Registrarse */
 .bodyRegistrarse{
     height: 100vh;
     background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
@@ -538,7 +591,7 @@ hr{
     }
 }
 
-/*media querys para mobile registrarse*/
+/*media querys para mobile PAGINA registrarse*/
 @media (max-width: 1200px) {
     .bodyRegistrarse{
         .headerRegistrarse{
@@ -587,7 +640,7 @@ hr{
 
 }
 
-/*Detalle Mario*/
+/*ESTILOS ESCRITORIO Detalle Mario*/
 .mainDetalle{
     
     .detalle{
@@ -667,6 +720,7 @@ hr{
     }
 
 }
+/*ESTILOS MOBILE Y TABLETS DETALLE*/
 @media screen and (max-width:1200px){
     .mainDetalle{
         .detalle{
@@ -738,4 +792,11 @@ hr{
             }
         }
     }
+}
+
+hr{
+    border: 1px solid #9f3647;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
 }
