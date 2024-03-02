@@ -246,6 +246,8 @@ body{
                     height: 300px;
                     position: relative;
                     overflow: hidden;
+                    border-radius: 10px;
+                    transition: all 0.5s ease;
                    
                     .imgTendencia{
                         width: 100%;
@@ -272,6 +274,11 @@ body{
                             transition: opacity 0.5s ease-in-out;
     
                         }
+                    }
+                    &:hover{
+                       box-shadow: 0 0 30px #9f3648cd;
+                       transform: scale(1.1);
+                      
                     }
                     &:hover h4 {
                         opacity: 1;
