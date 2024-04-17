@@ -4,40 +4,32 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
-@keyframes tilt-n-move-shaking {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(5px, 5px) rotate(5deg); }
-    50% { transform: translate(0, 0) rotate(0eg); }
-    75% { transform: translate(-5px, 5px) rotate(-5deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-}
-/* width */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
   
-/* Track */
+
 ::-webkit-scrollbar-track {
     background: rgb(23, 23, 23);
 }
    
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #9f3647;
 }
   
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background:#9f3647;
 }
 body{
     background-color: #181419;
     color:white; 
-     /* scrollbar-color: #9f3647  #181419; /*nuevo
-     scrollbar-width: thin;*/
+
 }
 
-/*ESTILOS HEADER PARA ESCRITORIO*/
+
 .header{
     background-color:#9f3647;
     color:#ffffff;
@@ -57,7 +49,7 @@ body{
             color: #ffffff;
             font-weight: 700;
             font-size: 1.2rem;
-            /*animacion hover*/
+            /*animacion*/
             &:hover{
                 animation: tilt-n-move-shaking 0.25s infinite;
             }
@@ -74,7 +66,6 @@ body{
                     font-weight: 700;
                     font-size: 1.1rem;
                     padding: 0.5rem 1rem;
-                    /* Agregar efecto de botón presionado */
                     transition: transform 0.3s, box-shadow 0.3s;
                     &:hover {
                         transform: scale(0.95);
@@ -87,12 +78,9 @@ body{
                     color: white;
                     
                     border-radius: 5px;
-                     /* Agregar efecto de botón presionado */
                      transition: transform 0.3s, box-shadow 0.3s;
                      &:hover {
                          background-color: #9f3647;
-                        /* transform: scale(0.95);
-                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
                      }
                 }
             }
@@ -101,7 +89,8 @@ body{
     }
    
 }
-/*ESTILOS PARA HEADER MOBILE Y TABLET*/
+
+/*mediaquerys*/
 
 @media (max-width: 768px) {
     .header{
@@ -132,11 +121,11 @@ body{
         }
     }
 }
-/*ESTILOS PARA MAIN ESCRITORIO*/
+
 .main{
     .sectionPrincipal{
         color:white;
-        background:linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/banner-bg.jpg);
+        background:linear-gradient(to right top, #0000008a, #0000008a), url(../assets/img/cine-2.jpg);
         background-size: cover;
         background-position: center;
         height: 90vh;
@@ -294,8 +283,8 @@ body{
                         width: 100%;
                         height: 100%;
                         border-radius: 10px;
-                        background-color: #9f3648; /* Color rojo transparente */
-                        z-index: 1; /* Para asegurarse de que esté sobre la imagen */
+                        background-color: #9f3648; 
+                        z-index: 1;
                     }
                 }
             }
@@ -458,7 +447,6 @@ body{
     }
 }
 
-/*ESTILOS ESCRITORIO FOOTER*/
 .footer{
     background-color:#9f3647;
     color:#ffffff;
@@ -494,7 +482,7 @@ body{
         cursor: pointer;
     }
 }
-/*ESTILOS FOOTER CELULAR Y TABLET CHICA*/
+
 @media (max-width: 768px) {
     .footer{
         height: initial;
@@ -518,31 +506,26 @@ body{
 }
 
 
-
-
-/*ESTILOS ESCRITORIO PARA PAGINA Registrarse */
 .bodyRegistrarse{
     height: 100vh;
     background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
     background-size: cover;
     background-position: center;
     .headerRegistrarse{
-        color:#ffffff;
-        height: 8vh;
-        padding:30px;
-        .anclaLogo{
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.2rem;
-             /*animacion hover*/
-            &:hover{
-                animation: tilt-n-move-shaking 0.25s infinite;
-            }
-        }
+    color:#ffffff;
+    height: 8vh;
+    padding:30px;
+    .anclaLogo{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    &:hover{
+        animation: tilt-n-move-shaking 0.25s infinite;
+    }
+    }
     }
     .main{
-         /*seccion de registrarse.html*/
         .seccionRegistrarse{
             background-color:rgb(42, 42, 42);
             width: 30%;
@@ -560,7 +543,6 @@ body{
                 font-weight: 700;
                 margin-bottom: 20px;
             }
-            /*seleccionar todos los input menos el checkbox*/
             form{
                 width: 100%;
                 padding:40px;
@@ -612,7 +594,8 @@ body{
     }
 }
 
-/*media querys para mobile PAGINA registrarse*/
+/*mediaquery*/
+
 @media (max-width: 1200px) {
     .bodyRegistrarse{
         .headerRegistrarse{
@@ -661,88 +644,10 @@ body{
 
 }
 
-/*ESTILOS ESCRITORIO Detalle Mario*/
-.mainDetalle{
-    
-    .detalle{
-        padding-top:50px;
-        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/mario-bg.jpg");
-        background-size: cover;
-        background-position: center;
-        height: 70vh;
-        .contenedorDetalle{
-            width:75%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            column-gap: 60px;
-            img{
-              border-radius: 20px;
-            }
-            .textoDetalle{
-                h1{
-                    font-size: 2.2rem;
-                    font-weight: 700;
-                }
-                h2{
-                    margin-top:20px;
-                }
-                .contenedorCreditos{
-                    margin-top:20px;
-                    display: flex;
-                    justify-content:space-between;
-                }
-            }
-        }
-        
-        
-       
-    }
-    .trailer{
-        padding-top:150px;
-        padding-bottom: 100px;
-        width:75%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        column-gap: 70px;
-        .contenedorInfo{
-            .redes{
-                margin-bottom: 20px;
-                ul{
-                    list-style: none;
-                    display: flex;
-                    column-gap: 20px;
-                    li{
-                        a{
-                            text-decoration: none;
-                            color: #ffffff;
-                            font-size: 2.5rem;
-                            margin-right: 50px;
-                        }
-                    }
-                  
-                }
-            }
-            .info{
-                table{
-                    width: 100%;
-                    tr{
-                        td{
-                            font-size: 1.2rem;
-                            padding: 10px 0px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 
-}
-/*ESTILOS MOBILE Y TABLETS DETALLE*/
-@media screen and (max-width:1200px){
+/*mediaquery*/
+
+/* @media screen and (max-width:1200px){
     .mainDetalle{
         .detalle{
             height: initial;
@@ -820,4 +725,4 @@ hr{
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
-}
+} */
