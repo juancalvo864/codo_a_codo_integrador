@@ -36,145 +36,12 @@
                 <input class="inputBuscador" type="text" placeholder="Buscar..."/>
                 <input class="botonBuscador" type="submit" value="Buscar">
             </form>
-           
-
         </section>
         <hr>
         <section id="tendencias" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000" class="peliculasTendencia">
             <h3 class="tituloSection">Las tendencias de hoy</h3>
-            <div class="peliculas">
-                <a href="#">
-                    <div class="pelicula">
-                    
-                        <img class="imgTendencia" src="./assets/img/dune_peli.webp" alt="The Beekeeper" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>The Beekeeper</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                    
-                        <img class="imgTendencia" src="./assets/img/fallout_peli.webp" alt="Badland Hunters" loading="lazy">
-                       
-                        <div class="tituloPelicula">
-                            <h4>Badland Hunters</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/shogun_peli.webp" alt="The Marvels" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>The Marvels</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/civil_peli.webp" alt="Wonka" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                                <h4>Wonka</h4>
-                        </div>
-                    </div>
-                   
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/woody_peli.webp" alt="Aquaman and the Lost Kingdom" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>Aquaman and the Lost Kingdom</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/panda_peli.webp" alt="Migration" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>Migration</h4>
-                        </div>
-                        
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/godzilla_peli.webp" alt="Sixty Minutes" loading="lazy">
-                       
-                        <div class="tituloPelicula">
-                            <h4>Sixty Minutes</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/3blody_peli.webp" alt="Wish" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>Wish</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/damaged_peli.webp" alt="The Masked Saint" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>The Masked Saint</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/immaculada_peli.webp" alt="Due Justice" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>Due Justice</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                        
-                        <img class="imgTendencia" src="./assets/img/sympathizer_peli.webp" alt="Orion and the Darke" loading="lazy">
-                        
-                        <div class="tituloPelicula">
-                            <h4>Orion and the Dark</h4>
-                        </div>
-                    
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="pelicula">
-                    
-                        <img class="imgTendencia" src="./assets/img/dune2_peli.webp" alt="Genghis Khan" loading="lazy">
-                       
-                        <div class="tituloPelicula">
-                            <h4>Genghis Khan</h4>
-                        </div>
-                    
-                    </div>
-                </a>
+            <!-- en el siguiente div se imprimen las cards generadas en js -->
+            <div id="movies" class="peliculas">            
             </div>
             <button class="boton anterior">Anterior</button>  
             <button class="boton siguiente">Siguiente</button>
@@ -182,7 +49,7 @@
         <hr>
         <section data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="2000" class="peliculasAclamadas">
             <h3 class="tituloSection">Las más aclamadas</h3>
-             <div class="aclamadas">
+             <div id="top_rated" class="aclamadas">
                 <div class="peliculaItem">
                     <img class="imgAclamada" src="./assets/img/carru_peli.webp" alt="aclamada_1" loading="lazy">
                 </div>
@@ -221,11 +88,13 @@
             </ul>
         </nav>
         <a href="#main" class="flechaArriba">
-            <img src="./assets/img/flecha-hacia-arriba.png" alt="ir arriba flecha">
+            <img src="./assets/img/flecha_arriba.png" alt="ir arriba flecha">
         </a>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
+    <script src="./js/cards.js"></script>
+</body>
 </HMTL>
