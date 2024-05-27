@@ -17,7 +17,7 @@ async function fetchData() {
         displayMoviesTrend(dataTrend.results);
         displayMoviesTopRated(dataRated.results);
     } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error fetch : ', error);
     }
 }
 
