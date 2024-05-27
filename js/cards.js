@@ -24,56 +24,40 @@ async function fetchData() {
 const movieContainer = document.getElementById('movies');
 function displayMoviesTrend(movies) {
     movieContainer.innerHTML = '';
+    let movieHtml = '';
     movies.forEach(movie => {
-        const movieLink = document.createElement('a');
-        movieLink.href = '#';
-
-        const movieDiv = document.createElement('div');
-        movieDiv.classList.add('pelicula');
-
-        const movieImage = document.createElement('img');
-        movieImage.classList.add('imgTendencia');
-        movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-        movieImage.alt = movie.title;
-        movieImage.loading = 'lazy';
-
-        const movieTitleDiv = document.createElement('div');
-        movieTitleDiv.classList.add('tituloPelicula');
-
-        const movieTitle = document.createElement('h4');
-        movieTitle.textContent = movie.title;
-
-        movieTitleDiv.appendChild(movieTitle);
-        movieDiv.appendChild(movieImage);
-        movieDiv.appendChild(movieTitleDiv);
-        movieLink.appendChild(movieDiv);
-
-        movieContainer.appendChild(movieLink);
+        movieHtml +=
+        `<a href="#">
+        <div class="pelicula">
+            <img class="imgTendencia" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy">
+            <div class="tituloPelicula">
+                <h4>${movie.title}</h4>
+            </div>
+        </div>
+        </a>
+    `;
     });
+    movieContainer.innerHTML = movieHtml;
 }
+
 
 const carrouselContainer = document.getElementById('top_rated');
 function displayMoviesTopRated(movies) {
-    carrouselContainer.innerHTML = ''; 
+    movieContainer.innerHTML = '';
+    let movieHtml = '';
     movies.forEach(movie => {
-        const movieDiv = document.createElement('div');
-        movieDiv.classList.add('peliculaItem');
-
-        const movieImage = document.createElement('img');
-        movieImage.classList.add('imgAclamada');
-        movieImage.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-        movieImage.alt = movie.title;
-        movieImage.loading = 'lazy';
-
-        const movieTitleDiv = document.createElement('div');
-        movieTitleDiv.classList.add('tituloPelicula');
-
-        const movieTitle = document.createElement('h4');
-        movieTitle.textContent = movie.title;
-
-        movieDiv.appendChild(movieImage);
-        carrouselContainer.appendChild(movieDiv);
+        movieHtml +=
+        `<a href="#">
+        <div class="pelicula">
+            <img class="imgTendencia" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" loading="lazy">
+            <div class="tituloPelicula">
+                <h4>${movie.title}</h4>
+            </div>
+        </div>
+        </a>
+    `;
     });
-}
+    movieContainer.innerHTML = movieHtml;
+};
 
 fetchData();
